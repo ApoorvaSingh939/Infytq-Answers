@@ -1,7 +1,7 @@
 class Tester {
     
-    static void validation(String accountNumber, int salary, int accountBalance, String loneType, int loneAmountExpected, int emisExpexted){
-        if(accountNumber.length() == 4 && accountNumber.charAt(0) == 1 && accountBalance >= 1000){
+    static void validation(int accountNumber, int salary, int accountBalance, String loneType, int loneAmountExpected, int emisExpexted){
+	    if((accountNumber>=1000 && accountNumber<=1999) && accountBalance >= 1000){
             if(salary > 25000 && loneType.equals("Car")){
                 System.out.println("eligibleLoneAmount=500000");
                 System.out.println("eligibleEmis=36");
@@ -23,7 +23,7 @@ class Tester {
     
 	public static void main(String[] args) {
 		// Implement your code here 
-		validation( "1001", 40000, 250000, "Car", 300000, 30);
+		validation( 1001, 40000, 250000, "Car", 300000, 30);
 	}
 }
 
